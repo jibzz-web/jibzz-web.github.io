@@ -1,0 +1,142 @@
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --form-bg: rgba(0, 0, 0, 0.75);
+  --input-bg: #2c2c2c;
+  --accent: #00c3ff;
+}
+
+body.light {
+  --bg-color: #f0f0f0;
+  --text-color: #000;
+  --form-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: #e6e6e6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color) url('bgg1.jpg') no-repeat center/cover;
+  backdrop-filter: blur(5px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+.toggle-mode {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.toggle-mode button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.container {
+  background: var(--form-bg);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+  width: 60px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-form p {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-pass {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.options .forgot {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #00a0d1;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
